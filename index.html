@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pizza place</title>
+
+    <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+    sans-serif;
+}
+div.container {
+  min-height: 100%;
+  width: 80vw;
+  margin: 0 auto;
+  background-color: #fff;
+}
+img#banner-logo {
+  width: 80vw;
+  vertical-align: top;
+}
+
+nav {
+  background: linear-gradient(black, rgb(179, 20, 25));
+  text-align: center;
+  height: 5vh;
+}
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 0.5em;
+}
+nav a:hover {
+  color: yellow;
+}
+
+#text-wrap {
+  margin: 0 1.5em;
+}
+
+#info-wrap {
+  text-align: center;
+  font-size: 15px;
+}
+input#name-input::placeholder {
+  color: rgba(179, 20, 25, 0.7);
+}
+#postal-code::placeholder {
+  color: rgba(179, 20, 25, 0.7);
+}
+#phone-number::placeholder {
+  color: rgba(179, 20, 25, 0.7);
+}
+
+h1 {
+  color: rgb(179, 20, 25);
+  font-size: 3rem;
+  font-family: sans-serif, "Arial";
+}
+p {
+  font-size: 16px;
+}
+
+div.customer-information {
+  display: inline-block;
+  width: 500px;
+  height: 450px;
+  border-radius: 30px;
+  background-color: beige;
+  margin: 0.5em;
+  padding-bottom: 2em;
+  border: 1px solid black;
+}
+
+form {
+  padding: 1em;
+}
+
+form > div {
+  margin: 0.5rem 0;
+}
+form > div::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+label,
+input {
+  box-sizing: border-box;
+}
+label {
+  float: left;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  padding-right: 0.5rem;
+  text-align: left;
+}
+#referral-source {
+  float: right;
+  width: 168px;
+}
+input {
+  float: right;
+  height: 1.5rem;
+}
+#dine-out-count {
+  width: 75px;
+}
+
+#checkbox {
+  float: left;
+  margin-top: -0.2em;
+}
+#checkbox-label {
+  float: right;
+  margin-right: 3em;
+}
+
+.text-block {
+  width: 150px;
+  height: 35px;
+  background-color: rgb(179, 20, 25);
+  position: relative;
+  top: -12.5px;
+  left: 30px;
+}
+
+.text-for-block {
+  top: -15px;
+  left: 5px;
+  font-size: 18px;
+  color: white;
+  position: absolute;
+}
+
+#button-row {
+  margin: 1em;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+}
+.button-font {
+  font-size: 20px;
+  padding: 0.5em;
+}
+
+footer {
+  background-image: linear-gradient(rgb(179, 20, 25), black);
+  min-height: 25vh;
+  padding: 1em 3em;
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+}
+footer h1 {
+  color: rgb(255, 241, 147);
+  font-size: 1em;
+}
+footer a {
+  color: white;
+  font-size: 1.1em;
+  margin-bottom: -20px;
+  display: flex;
+  margin-left: -10px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer p {
+  color: white;
+  font-size: 1.1em;
+  margin-bottom: -20px;
+  display: block;
+}
+
+.top-margin {
+  margin-top: 2em;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+  <img id="banner-logo" src="">
+  <nav>
+    <a href="">Home</a>
+    <a href="">Menu</a>
+    <a href="">Directions</a>
+    <a href="">Coupons</a>
+    <a href="">Orders</a>
+    <a href="">Catering</a>
+    <a href="">Reviews</a>
+  </nav>
+  <div id="text-wrap">
+    <h1>Customer Survey</h1>
+    <p>Thank you for taking our customer survey. Your response helps Red Ball Pizza maintain the tradition that has made us the top-rated pizzeria in the metro area. All participants are automatically entered into a monthly drawing to receive a Red Ball Express PizzaFest containing two large pizzas, a 2-liter soda, and a side order of chicken wings. Check your e-mail inbox for contest results.</p>
+    <p>Surveys are private and confidential. Red Ball Pizza will not share your contact information with third parties, ever.</p>
+    <p>equired values are marked by an asterisk (*)</p>
+  </div>
+
+  <div id="info-wrap">
+    <div class="customer-information">
+      <div class="text-block">
+        <p class="text-for-block">Customer Survey</p>
+      </div>
+      <form id="customer-information-form">
+        <div>
+          <label for="name-input">Name*</label>
+          <input type="text" placeholder="first and last name" id="name-input">
+        </div>
+        <div>
+          <label for="street-input">Street Address</label>
+          <input type="text" id="street-input">
+        </div>
+        <div>
+          <label for="city-input">City</label>
+          <input type="text" id="city-input">
+        </div>
+        <div>
+          <label for="state-input">State</label>
+          <input type="text" id="state-input">
+        </div>
+        <div>
+          <label for="postal-code">Postal code</label>
+          <input type="text" id="postal-code" placeholder="nnnnn (-nnnn)">
+        </div>
+        <div>
+          <label for="phone-number">Phone number</label>
+          <input type="text" id="phone-number" placeholder="(nnn) nnn-nnnn">
+        </div>
+        <div>
+          <label for="email">E-mail*</label>
+          <input type="text" id="email">
+        </div>
+        <div>
+          <label for="referral-source" id="referral-source-label">Where did you hear about us? <br> (select all that apply)</label>
+          <select id="referral-source" size="5">
+            <option value="internet">Internet</option>
+            <option value="magazine">Magazine</option>
+            <option value="newspaper">Newspaper</option>
+            <option value="word-of-mouth">Word of Mouth</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="favorite-dish">What's your favorite dish?</label>
+          <input type="text" id="favorite-dish" list="dishType">
+          <datalist id="dishType">
+            <option value="Antipasto Pizza"></option>
+            <option value="Big Kahuna Pizza"></option>
+            <option value="BBQ Chicken Pizza"></option>
+            <option value="Mediterranean Herb Pizza"></option>
+            <option value="Pasta Artichoke Pizza"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="dine-out-count">How many times do you dine out per month?</label>
+          <input type="number" id="dine-out-count" min="0" value="0">
+        </div>
+        <div>
+          <label for="checkbox" id="checkbox-label">Add me to your mailing list for great coupons and specials!</label>
+          <input type="checkbox" id="checkbox">
+        </div>
+      </form>
+    </div>
+
+    <div class="customer-information">
+      <div class="text-block" style="width: 320px;">
+        <p class="text-for-block">Share Your Experience at Red Ball Pizza</p>
+      </div>
+
+      <form id="customer-information-form">
+        <div>
+          <label for="date-input">Date of Visit</label>
+          <input type="date" placeholder="first and last name" id="date-input">
+        </div>
+        <div>
+          <label for="street-input">Order Type</label>
+          <input type="text" id="street-input" list="orderType">
+          <datalist id="orderType">
+            <option value="Carry Out"></option>
+            <option value="Delivary"></option>
+            <option value="Dine in"></option>
+            <option value="Take 'n Bake"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="city-input">Was your service friendly? </label>
+          <input type="text" id="city-input">
+        </div>
+        <div>
+          <label for="state-input">Was your order correct?</label>
+          <input type="text" id="state-input">
+        </div>
+        <div>
+          <label for="postal-code">Was your food hot?</label>
+          <input type="text" id="postal-code" placeholder="nnnnn (-nnnn)">
+        </div>
+        <div>
+          <label for="phone-number">Rate the overall service
+            (0=poor; 10=great)</label>
+          <input type="text" id="phone-number" placeholder="(nnn) nnn-nnnn">
+        </div>
+        <div>
+          <label for="email">Tell us more about your experience</label>
+          <input type="text" id="email">
+        </div>
+      </form>
+
+    </div>
+
+    <div id="button-row">
+      <button class="button-font">Submit My Survey</button>
+      <button class="button-font">Cancel</button>
+    </div>
+  </div>
+  <footer>
+    <div class="collum">
+      <h1>ORDER</h1>
+      <a href="">Specials</a>
+      <a href="">Pizza</a>
+      <a href="">Pasta</a>
+      <a href="">wings</a>
+      <a href="">sides</a>
+      <a href="">salads</a>
+      <a href="">drinks</a>
+      <a href="">Desserts</a>
+    </div>
+
+    <div class="collum">
+      <h1>ABOUT US</h1>
+      <a href="">Our Story</a>
+      <a href="">Blog</a>
+      <a href="">Catering</a>
+      <a href="">School Lunches</a>
+      <h1 class="top-margin">CUSTOMER SERVICE</h1>
+      <a href="">Gluten Free Crusts</a>
+      <a href="">Contact Us</a>
+      <a href="">FAQs</a>
+    </div>
+
+    <div class="collum">
+      <h1>MY ACCOUNT</h1>
+      <a href="">Create an Account</a>
+      <a href="">Sign In</a>
+      <a href="">Order Status</a>
+      <h1 class="top-margin">NUTRITION</h1>
+      <a href="">Nutrition Information</a>
+      <a href="">Food Allergen</a>
+      <a href="">Gluten Free Pizza</a>
+    </div>
+
+    <div class="collum">
+      <h1>POLICIES</h1>
+      <a href="">Privacy Policy</a>
+      <a href="">Terms of Use</a>
+
+      <p style="margin-top: 2em;">Red Ball Pizza</p>
+      <p>811 Beach Drive</p>
+      <p>Ormond Beach, FL 32175</p>
+    </div>
+  </footer>
+</div> <!-- end container class -->
+<!-- end container class -->
+</body>
+<script>
+const bannerLogo = document.getElementById("banner-logo");
+const customerInfoForm = document.getElementById("customer-information");
+
+let hamburgerSrc =
+  "https://drive.google.com/uc?id=1CnkfA7eH9vAEcuHo-eSbTh0QQdnpIcQb";
+let greenCheck =
+  "https://drive.google.com/uc?id=1LDcwQ0vWPkphHPOMDOzOZ8ei3P5hEunv";
+let bannerSrc =
+  "https://drive.google.com/uc?id=1XVrJasLndnCWu2aB1AbxBrHP4CxtZ7YP";
+let checkerBoard =
+  "https://drive.google.com/uc?id=1xTkMkhjX350bTk1q0hZXm6RwQKKK0j4T";
+
+document.body.style.backgroundImage = `url(${checkerBoard})`;
+
+bannerLogo.src = bannerSrc;
+
+customerInfoForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+});
+
+</script>
+</html>
